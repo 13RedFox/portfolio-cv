@@ -1,0 +1,89 @@
+@import './vars';
+
+// * MAIN STYLE:
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: $grad;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-size: $base-size;
+  color: $black;
+  line-height: 1.5;
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page {
+  display: block;
+  max-width: 120rem;
+  width: 100%;
+  margin: 0 auto;
+  color: $white;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem 1px rgba($black, 0.1);
+  margin: 0 auto;
+  transition: background 0.3s ease-in-out;
+}
+
+.dark {
+  background: rgba($black, 0.3);
+}
+
+.light {
+  background: rgba ($white, 0.2);
+}
+
+// * Burger
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 4rem;
+  height: 2.1rem;
+  position: absolute;
+  top: 50%;
+  right: 6rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  @media screen and (min-width: 992px) {
+    display: none;
+  }
+
+  &__line {
+    display: flex;
+    width: 40px;
+    height: 3px;
+    background: $black;
+    margin-bottom: 0.6rem;
+    transition: all 0.3s ease-in-out;
+
+    &:last-child {
+      width: 33px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@import './blocks/header';

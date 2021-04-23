@@ -1,0 +1,123 @@
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  &__logo {
+    display: flex;
+    color: $white;
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  &__nav {
+    display: none;
+
+    @media screen and (min-width: 992px) {
+      display: block;
+      width: 40rem;
+    }
+    &-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @media screen and (min-width: 992px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    &-item {
+      margin-bottom: 2rem;
+
+      @media screen and (min-width: 992px) {
+        margin-bottom: 0;
+      }
+    }
+
+    &-link {
+      position: relative;
+      font-size: 2.6rem;
+      line-height: 2.6rem;
+      color: $white;
+      text-transform: capitalize;
+
+      @media screen and (min-width: 992px) {
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+      }
+
+      &:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: -3px;
+        content: '';
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        transition: all 0.3s ease-in-out;
+        width: 0;
+      }
+
+      &:hover:after {
+        width: 100%;
+        left: 0;
+        background: $white;
+      }
+    }
+  }
+
+  &__active {
+    left: 0 !important;
+  }
+
+  &__mobile {
+    position: absolute;
+    top: 6rem;
+    left: -100%;
+    display: block;
+    width: 100%;
+    height: calc(100vh - 6rem);
+    padding-top: 2rem;
+    transition: all 0.3s ease-in-out;
+
+    @media screen and (min-width: 992px) {
+      display: none;
+    }
+  }
+
+  input[type='checkbox'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &__toggle {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: url('./../img/moon.svg') no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease-in-out;
+
+    &:checked {
+      background: url('./../img/moon-night.svg') no-repeat;
+    }
+  }
+}
