@@ -86,4 +86,14 @@ a {
   }
 }
 
+.main__title {
+  font-size: 2rem;
+  line-height: 2rem;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
 @import './blocks/header';
+@import './blocks/about';
+@import './blocks/skill';

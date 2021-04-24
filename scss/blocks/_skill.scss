@@ -1,0 +1,65 @@
+.skill {
+  padding: 4rem 1rem 0;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto 4rem;
+
+    @media screen and (min-width: 992px) {
+      flex-direction: row;
+    }
+
+    &-link {
+      font-size: 1.6rem;
+      color: $white_l;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+
+  &__exp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      p {
+        color: $white_l;
+        display: flex;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    &-date {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: $black;
+      margin-right: 1rem;
+    }
+
+    &-github {
+      display: block;
+      font-size: 1.6rem;
+      color: $red;
+      margin-left: 1rem;
+    }
+  }
+}
