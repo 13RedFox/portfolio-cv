@@ -19,7 +19,7 @@
       transition: color 0.3s ease-in-out;
 
       &:hover {
-        color: red;
+        color: $yellow;
       }
     }
   }
@@ -58,8 +58,16 @@
     &-github {
       display: block;
       font-size: 1.6rem;
-      color: $red;
+      color: $white;
       margin-left: 1rem;
+      transition: color 0.3s ease-in-out;
+      &:hover {
+        color: $yellow;
+      }
     }
+  }
+
+  &__lang {
+    text-align: center;
   }
 }
